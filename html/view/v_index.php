@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="html/style.css">
 
     </head>
     <body>
@@ -24,10 +24,11 @@
         <br>
         <p>Plat 2</p>
         <br>
-        <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
+        <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
           <br/>
           <button type="button" class="btn btn-link">
-    <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+    <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+  </p>
     </div>
 
   <div class="col-md-4 col-xs-12"><!-- <h2>Cuisine du Monde</h2>
@@ -65,10 +66,11 @@
             <br>
             <p>Plat 2</p>
             <br>
-            <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
               <button type="button" class="btn btn-link">
-        <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
         </div>
 
         <div class="item">
@@ -80,10 +82,11 @@
             <br>
             <p>Plat 2</p>
             <br>
-            <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
               <button type="button" class="btn btn-link">
-        <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
         </div>
 
         <div class="item">
@@ -95,10 +98,11 @@
             <br>
             <p>Plat 2</p>
             <br>
-            <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
               <button type="button" class="btn btn-link">
-        <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
         </div>
 
         <div class="item">
@@ -110,10 +114,11 @@
             <br>
             <p>Plat 2</p>
             <br>
-            <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
               <button type="button" class="btn btn-link">
-        <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
         </div>
 
         <div class="item">
@@ -125,10 +130,11 @@
             <br>
             <p>Plat 2</p>
             <br>
-            <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
               <button type="button" class="btn btn-link">
-        <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
         </div>
 
 
@@ -158,19 +164,20 @@
         <p>Plat 2</p>
         <br>
         <p><button type="button" class="btn btn-link">
-          <a href="view/v_infoMenu.php">>>Infos menu</a></button>
+          <a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
           <br/>
           <button type="button" class="btn btn-link">
-            <a href="view/v_infoMenu.php">>>Tarifs</a></button></p>
+            <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+          </p>
 
 
         </div>
     </div>
 </div>
 
-<p><button type="button" class="btn btn-default btn-block"><a href="view/v_menuSemaine.php">Menu de la semaine</a></button></p>
+<p><button type="button" class="btn btn-default btn-block"><a href="html/view/v_menuSemaine.php">Menu de la semaine</a></button></p>
 
-    <p><button type="button" class="btn btn-warning"><a href="view/v_connexionAdmin.php">Connexion Admin</a></button>
+    <p><button type="button" class="btn btn-warning"><a href="html/view/v_connexionAdmin.php">Connexion Admin</a></button>
 </p>
           <?php
 /*$restaurant = "Pastaria";

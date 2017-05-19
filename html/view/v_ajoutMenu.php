@@ -34,7 +34,7 @@
   <textarea class="form-control" rows="5" id="comment"></textarea>
 </div>
 
-<p><button type="button" class="btn btn-warning"> <a href="../index.php">Retour</a></button>
+<p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
 </p>
           <?php
 /*$restaurant = "Pastaria";

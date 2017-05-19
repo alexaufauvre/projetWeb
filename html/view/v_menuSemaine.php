@@ -31,7 +31,7 @@
     <div class="rightColumn"><h2>L'(x)tra</h2></div>
 </div>
 
-<p><button type="button" class="btn btn-warning"> <a href="../index.php">Retour</a></button>
+<p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
 </p>
           <?php
 /*$restaurant = "Pastaria";
