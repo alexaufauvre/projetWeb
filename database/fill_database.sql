@@ -1,11 +1,11 @@
--- Remplissage de la base de données
+-- Remplissage de la base de données PostGres
 
--- Table 'admin'
-INSERT INTO admin (ID_admin, login, psswrd)
-VALUES (1, 'admin1', 'thepassword1'),
-       (2, 'admin2', 'thepassword2'),
-       (3, 'admin3', 'thepassword3'),
-       (4, 'admin4', 'thepassword4');
+-- Table 'ru_user'
+INSERT INTO ru_user (ID_user, login, psswrd, role)
+VALUES (1, 'admin1', 'thepassword1', 0),
+       (2, 'admin2', 'thepassword2', 0),
+       (3, 'admin3', 'thepassword3', 0),
+       (4, 'admin4', 'thepassword4', 0);
 
 -- Table 'restaurant'
 INSERT INTO restaurant (ID_restaurant, lieu_restaurant)

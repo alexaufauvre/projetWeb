@@ -1,10 +1,11 @@
--- Création de la base de données
+-- Création de la base de données PostGres
 
-CREATE TABLE IF NOT EXISTS admin (
-  ID_admin INTEGER,
+CREATE TABLE IF NOT EXISTS ru_user (
+  ID_user INTEGER,
   login varchar(50),
   psswrd varchar(100),
-  PRIMARY KEY (ID_admin)
+  role INTEGER,
+  PRIMARY KEY (ID_user)
 );
 
 CREATE TABLE IF NOT EXISTS restaurant (
@@ -14,13 +15,13 @@ CREATE TABLE IF NOT EXISTS restaurant (
 );
 
 CREATE TABLE IF NOT EXISTS plat (
-  ID_plat INTEGER AUTO_INCREMENT,
+  ID_plat SERIAL,
   nom_plat varchar(100),
   PRIMARY KEY (ID_plat)
 );
 
 CREATE TABLE IF NOT EXISTS menu (
-	ID_menu INTEGER AUTO_INCREMENT,
+	ID_menu SERIAL,
 	PRIMARY KEY (ID_menu)
 );
 
@@ -31,13 +32,15 @@ CREATE TABLE IF NOT EXISTS composition (
   ID_plat INTEGER,
   PRIMARY KEY (date_composition, ID_menu, ID_plat),
   FOREIGN KEY (ID_menu) REFERENCES menu(ID_menu),
-  FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat),
+  FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat)
 );
+
+CREATE TYPE noteavis AS ENUM('0','1','2','3','4','5');
 
 CREATE TABLE IF NOT EXISTS avis (
   ID_avis INTEGER,
   auteur varchar(30),
-  note ENUM('0','1','2','3','4','5'),
+  note noteavis,
   description char(150),
   PRIMARY KEY (ID_avis)
 );
@@ -53,11 +56,3 @@ CREATE TABLE IF NOT EXISTS apport (
   sodium INTEGER,
   PRIMARY KEY (ID_apport)
 );
-
-);
-
-/*ALTER TABLE composition ADD FOREIGN KEY (ID_menu) REFERENCES menu(ID_menu) ON DELETE CASCADE;
-ALTER TABLE composition ADD FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat) ON DELETE CASCADE;
-ALTER TABLE composition ADD PRIMARY KEY (ID_menu) REFERENCES menu(ID_menu) ON DELETE CASCADE;
-ALTER TABLE composition ADD PRIMARY KEY (ID_plat) REFERENCES plat(ID_plat) ON DELETE CASCADE;*/
-
