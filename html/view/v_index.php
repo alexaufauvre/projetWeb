@@ -177,7 +177,7 @@
 
 <p><button type="button" class="btn btn-default btn-block"><a href="html/view/v_menuSemaine.php">Menu de la semaine</a></button></p>
 
-    <p><button type="button" class="btn btn-warning"><a href="html/view/v_connexionAdmin.php">Connexion Admin</a></button>
+    <p><button type="button" class="btn btn-warning"><a href="html/view/v_connexion.php">Connexion Admin</a></button>
 </p>
           <?php
 /*$restaurant = "Pastaria";

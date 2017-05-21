@@ -1,5 +1,10 @@
 -- Remplissage de la base de données PostGres
 
+-- Sélection du menu
+-- Menu Pastaria
+SELECT nom_plat FROM plat, composition
+WHERE plat.ID_plat = composition.ID_plat AND composition.ID_restaurant='Pastaria' AND composition.date_composition=CURRENT_DATE; -- date de la forme 2017-05-22
+
 -- Table 'ru_user'
 INSERT INTO ru_user (ID_user, login, psswrd, role)
 VALUES (1, 'admin1', 'thepassword1', 0),
@@ -32,3 +37,22 @@ VALUES ('Feuilleté de Chèvre'),
        ('Haricots Verts Persillés'),
        ('Margarita'),
        ('Orientale');
+
+-- Table 'composition'
+INSERT INTO composition (date_composition, ID_restaurant, ID_plat)
+VALUES ('2017-05-22','Pastaria', 9),
+       ('2017-05-22','Pastaria', 5),
+       ('2017-05-22','Little Italy', 11),
+       ('2017-05-22','Little Italy', 12),
+       ('2017-05-22','L\'(x)tra', 3),
+       ('2017-05-22','L\'(x)tra', 4),
+       ('2017-05-22','Entrée chaude', 1),
+       ('2017-05-22','Saveurs de la Mer', 8),
+       ('2017-05-22','Saveurs de la Mer', 5),
+       ('2017-05-22','Grill', 6),
+       ('2017-05-22','Grill', 7),
+       ('2017-05-22','Rôtisserie', 2),
+       ('2017-05-22','Rôtisserie', 9),
+       ('2017-05-22','Cuisine du Monde', 6),
+       ('2017-05-22','Cuisine du Monde', 4),
+       ('2017-05-22','Cuisine du Monde', 10);
