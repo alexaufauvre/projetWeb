@@ -23,6 +23,7 @@
     <option>Rôtisserie</option>
     <option>Saveurs de la Mer</option>
     <option>Pastaria</option>
+    <option>Plats des Régions</option>
     <option>Grill</option>
     <option>Little Italy</option>
     <option>L'(x)tra</option>

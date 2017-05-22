@@ -8,24 +8,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="html/style.css">
+        <?php require_once "html/model/m_composition.php";
+        require_once "html/model/m_plat.php";
+        ?>
 
     </head>
+
+
     <body>
         <h1 class="TitreAccueil"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
 
-        <p>
-<div id="container-fluid">
-    <div class="row">
-      <div class="col-md-4 col-xs-12"><h2>Little Italy</h2>
-        <br>
-        <p>Entrée</p>
-        <br>
-        <p>Plat 1</p>
-        <br>
-        <p>Plat 2</p>
-        <br>
-        <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
-          <br/>
+
+        <div id="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-xs-12"><h2>Little Italy</h2>
+                  <br>
+
+                    <?php
+                    $platmodel = new PlatModel();
+                    $nom = 'Frites';
+                    $platmodel->getByNomPlat($nom);
+                    /*$compositionmodel = new CompositionModel();
+                    $resto = 'Little Italy';
+                    echo $compositionmodel->getMenu($resto);*/ ?>
+
+                    <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
+                      <br/>
           <button type="button" class="btn btn-link">
     <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
   </p>
@@ -175,6 +183,7 @@
     </div>
 </div>
 
+
 <p><button type="button" class="btn btn-default btn-block"><a href="html/view/v_menuSemaine.php">Menu de la semaine</a></button></p>
 
     <p><button type="button" class="btn btn-warning"><a href="html/view/v_connexion.php">Connexion Admin</a></button>
@@ -183,7 +192,6 @@
 /*$restaurant = "Pastaria";
 echo 'Le menu de ' .$restaurant. ' est :';*/
 ?>
-        </p>
     </body>
 
 

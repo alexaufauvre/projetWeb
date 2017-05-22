@@ -19,6 +19,7 @@ VALUES ('Entrée chaude','Europe'),
        ('Cuisine du Monde', 'Europe'),
        ('Saveurs de la Mer', 'Europe'),
        ('Rôtisserie', 'Europe'),
+       ('Plats des Régions', 'Afrique'),
        ('Grill', 'Afrique'),
        ('L\'(x)tra', 'Amerique'),
        ('Little Italy', 'Chapiteau');
