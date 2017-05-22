@@ -1,11 +1,11 @@
 /*custom font*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
 * {margin: 0; padding: 0;}
 body{
 	font-family: montserrat, arial, verdana;
-	background-color: #300611;
+	background-color: #C70039;
 	color: #FFFFFF;
 }
 

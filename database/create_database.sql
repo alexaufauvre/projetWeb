@@ -23,25 +23,38 @@ CREATE TABLE IF NOT EXISTS restaurant (
   PRIMARY KEY (ID_restaurant)
 );
 
+CREATE TABLE IF NOT EXISTS apport (
+  ID_apport INTEGER,
+  calories INTEGER,
+  lipides INTEGER,
+  glucides INTEGER,
+  sucres INTEGER,
+  proteines INTEGER,
+  fibres INTEGER,
+  sodium INTEGER,
+  PRIMARY KEY (ID_apport)
+);
+
 CREATE TABLE IF NOT EXISTS plat (
   ID_plat SERIAL,
   nom_plat varchar(100),
-  PRIMARY KEY (ID_plat)
+  ID_apport INTEGER,
+  PRIMARY KEY (ID_plat),
+  FOREIGN KEY (ID_apport) REFERENCES apport(ID_apport)
 );
 
-CREATE TABLE IF NOT EXISTS menu (
-	ID_menu SERIAL,
-  ID_restaurant varchar(50),
-	PRIMARY KEY (ID_menu),
-  FOREIGN KEY (ID_restaurant) REFERENCES restaurant(ID_restaurant)
+CREATE TABLE IF NOT EXISTS ru_date (
+	ID_date date,
+	PRIMARY KEY (ID_date)
 );
 
 
 CREATE TABLE IF NOT EXISTS composition (
-  date_composition date,
+  ID_date date,
   ID_restaurant varchar(50),
   ID_plat INTEGER,
-  PRIMARY KEY (date_composition, ID_restaurant, ID_plat),
+  PRIMARY KEY (ID_date, ID_restaurant, ID_plat),
+  FOREIGN KEY (ID_date) REFERENCES ru_date(ID_date),
   FOREIGN KEY (ID_restaurant) REFERENCES restaurant(ID_restaurant),
   FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat)
 );
@@ -55,19 +68,5 @@ CREATE TABLE IF NOT EXISTS avis (
   note noteavis,
   description char(150),
   PRIMARY KEY (ID_avis),
-  FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat)
-);
-
-CREATE TABLE IF NOT EXISTS apport (
-  ID_apport INTEGER,
-  ID_plat INTEGER,
-  calories INTEGER,
-  lipides INTEGER,
-  glucides INTEGER,
-  sucres INTEGER,
-  proteines INTEGER,
-  fibres INTEGER,
-  sodium INTEGER,
-  PRIMARY KEY (ID_apport),
   FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat)
 );

@@ -39,8 +39,12 @@ VALUES ('Feuilleté de Chèvre'),
        ('Margarita'),
        ('Orientale');
 
+       -- Table 'ru_date'
+       INSERT INTO ru_date (ID_date)
+       VALUES ('2017-05-22');
+
 -- Table 'composition'
-INSERT INTO composition (date_composition, ID_restaurant, ID_plat)
+INSERT INTO composition (ID_date, ID_restaurant, ID_plat)
 VALUES ('2017-05-22','Pastaria', 9),
        ('2017-05-22','Pastaria', 5),
        ('2017-05-22','Little Italy', 11),
