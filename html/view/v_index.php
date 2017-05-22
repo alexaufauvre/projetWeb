@@ -27,7 +27,7 @@
                     <?php
                     $platmodel = new PlatModel();
                     $res = $platmodel->getListeIdPlats();
-                    echo $res;
+                    var_dump ($res);
                     /*$compositionmodel = new CompositionModel();
                     $resto = 'Little Italy';
                     echo $compositionmodel->getMenu($resto);*/ ?>
