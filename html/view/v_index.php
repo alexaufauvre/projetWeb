@@ -25,12 +25,13 @@
                   <br>
 
                     <?php
+                    /*
                     $platmodel = new PlatModel();
                     $res = $platmodel->getListeIdPlats();
                     var_dump ($res);
-                    /*$compositionmodel = new CompositionModel();
+                    $compositionmodel = new CompositionModel();
                     $resto = 'Little Italy';
-                    echo $compositionmodel->getMenu($resto);*/ ?>
+                    var_dump $compositionmodel->getMenu($resto);*/ ?>
 
                     <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
                       <br/>

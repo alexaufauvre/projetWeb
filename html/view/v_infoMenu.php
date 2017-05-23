@@ -16,7 +16,7 @@
         <p>
         <h2>Little Italy</h2>
     <br>
-      <p>C tro bon wlh</p>
+      <p>Nom plats + apports + avis</p>
 
 
 <p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
