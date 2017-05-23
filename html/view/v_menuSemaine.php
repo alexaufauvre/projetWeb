@@ -14,22 +14,28 @@
         <h1 class="TitreAccueil"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
 
         <p>
-          <div id="container">
-    <div class="leftColumn"><h2>Little Italy</h2>
-    <br>
-      <p>Menu Lundi</p>
-</div>
 
-    <div class="centerColumn"><h2>Cuisine du Monde</h2></div>
+          <div class="form-group">
+          <label for="sel1">Sélectionner le restaurant</label>
+          <select class="form-control" id="sel1">
+          <option>Entrée chaude</option>
+          <option>Cuisine du Monde</option>
+          <option>Rôtisserie</option>
+          <option>Saveurs de la Mer</option>
+          <option>Pastaria</option>
+          <option>Plats des Régions</option>
+          <option>Grill</option>
+          <option>Little Italy</option>
+          <option>L'(x)tra</option>
+        </select>
+      </div>
 
-
-
-
-
-
-
-    <div class="rightColumn"><h2>L'(x)tra</h2></div>
-</div>
+          <div class="form-group">
+          <label for="sel1">Par jour</label>
+          <select class="form-control" id="sel1">
+          <option>Sélection jour</option>
+          </select>
+          </div>
 
 <p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
 </p>

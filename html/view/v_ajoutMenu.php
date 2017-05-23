@@ -31,8 +31,31 @@
 </div>
 
 <div class="form-group">
-  <label for="comment">Menu</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
+<label for="sel1">Plat 1</label>
+<select class="form-control" id="sel1">
+<option>Liste plats</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="sel1">Plat 2</label>
+<select class="form-control" id="sel1">
+<option>Liste plats</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="sel1">Plat 3</label>
+<select class="form-control" id="sel1">
+<option>Liste plats</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="sel1">Date</label>
+<select class="form-control" id="sel1">
+<option>Sélection date</option>
+</select>
 </div>
 
 <p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
