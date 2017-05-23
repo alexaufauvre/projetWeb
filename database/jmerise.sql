@@ -4,15 +4,14 @@
 
 
 #------------------------------------------------------------
-# Table: ru_user
+# Table: admin
 #------------------------------------------------------------
 
-CREATE TABLE ru_user(
-        ID_user Int NOT NULL ,
-        login   Varchar (50) ,
-        psswrd  Varchar (100) ,
-        role    Int ,
-        PRIMARY KEY (ID_user )
+CREATE TABLE admin(
+        ID_admin Int NOT NULL ,
+        login    Varchar (50) ,
+        psswrd   Varchar (100) ,
+        PRIMARY KEY (ID_admin )
 )ENGINE=InnoDB;
 
 
@@ -71,28 +70,17 @@ CREATE TABLE apport(
 
 
 #------------------------------------------------------------
-# Table: ru_date
-#------------------------------------------------------------
-
-CREATE TABLE ru_date(
-        id_date Date NOT NULL ,
-        PRIMARY KEY (id_date )
-)ENGINE=InnoDB;
-
-
-#------------------------------------------------------------
 # Table: composition
 #------------------------------------------------------------
 
 CREATE TABLE composition(
+        ID_date       Date ,
         ID_plat       Int NOT NULL ,
         ID_restaurant Varchar (50) NOT NULL ,
-        id_date       Date NOT NULL ,
-        PRIMARY KEY (ID_plat ,ID_restaurant ,id_date )
+        PRIMARY KEY (ID_plat ,ID_restaurant )
 )ENGINE=InnoDB;
 
 ALTER TABLE plat ADD CONSTRAINT FK_plat_ID_apport FOREIGN KEY (ID_apport) REFERENCES apport(ID_apport);
 ALTER TABLE avis ADD CONSTRAINT FK_avis_ID_plat FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat);
 ALTER TABLE composition ADD CONSTRAINT FK_composition_ID_plat FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat);
 ALTER TABLE composition ADD CONSTRAINT FK_composition_ID_restaurant FOREIGN KEY (ID_restaurant) REFERENCES restaurant(ID_restaurant);
-ALTER TABLE composition ADD CONSTRAINT FK_composition_id_date FOREIGN KEY (id_date) REFERENCES ru_date(id_date);

@@ -1,23 +1,27 @@
 <?php
   require_once "m_model.php";
   /**
-   * Classe permettant l'interaction avec la table "restaurant"
+   * Classe permettant l'interaction avec la table "composition"
    * Hérite de la classe Model
    * @author AlexAufauvre
    */
-  class CompositionModel extends Model {
+  class ComposeModel extends Model {
     /**
      * @var $pk_key clé primaire de la table
      */
-    protected $pk_key = 'date_composition';
+    protected $pk_key = 'ID_date';
     /**
      * @var $resto clé ID_restaurant de la table
      */
-    protected $resto = 'ID_restaurant';
+    protected $restaurant = 'ID_restaurant';
+    /**
+     * @var $resto clé ID_restaurant de la table
+     */
+    protected $dish = 'ID_dish';
     /**
      * @var $table table de la base de données utilisée par la classe
      */
-    protected $table = 'composition';
+    protected $table = 'compose';
 
     /**
      * Fonction pour la récupération d'un enregistrement en particulier
@@ -26,7 +30,7 @@
      */
     public function getMenu($id) {
       try{
-        $sql = 'SELECT ID_plat FROM '.$this->table.' WHERE '.$this->pk_key.' =' .date('Y-m-d'). ' AND ' .$this->resto.' = :id';
+        $sql = 'SELECT ID_dish FROM '.$this->table.' WHERE '.$this->pk_key.' =' .date('Y-m-d'). ' AND ' .$this->restaurant.' = :id';
         $req = $this->query($sql,array(":id"=>$id));
         $res = $req->fetch(PDO::FETCH_ASSOC);
         return $res;

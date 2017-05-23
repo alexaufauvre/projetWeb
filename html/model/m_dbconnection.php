@@ -2,15 +2,12 @@
 /**
  * Classe de connexion à une base de données
  * S'inspire du pattern singleton pour n'ouvrir qu'une seule connexion
- * @author JohanBrunet
+ * @author AlexAufauvre
  */
-class DatabaseConnection {
-   // // Paramètres pour l'accès à la base
-   // static private $host = "db648137671.db.1and1.com";
-   // static private $database   = "db648137671";
-   // static private $user = "dbo648137671";
-   // static private $password = "piscineRiasec";
-   /**
+
+class DBConnectionModel {
+
+    /**
     * Paramètres pour l'accès à la base de données
     * @var $host hôte de la base de données
     */

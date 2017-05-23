@@ -8,15 +8,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="html/style.css">
-        <?php require_once "html/model/m_composition.php";
-        require_once "html/model/m_plat.php";
+        <?php /*require_once "html/model/m_composition.php";
+        require_once "html/model/m_plat.php";*/
         ?>
 
     </head>
 
 
     <body>
-        <h1 class="TitreAccueil"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
+        <h1 class="HomeTitle"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
 
 
         <div id="container-fluid">
@@ -185,9 +185,9 @@
 </div>
 
 
-<p><button type="button" class="btn btn-default btn-block"><a href="html/view/v_menuSemaine.php">Menu de la semaine</a></button></p>
+<p><button type="button" class="btn btn-default btn-block"><a href="html/view/v_weekMenu.php">Menu de la semaine</a></button></p>
 
-    <p><button type="button" class="btn btn-warning"><a href="html/view/v_connexion.php">Connexion Admin</a></button>
+    <p><button type="button" class="btn btn-warning"><a href="html/view/v_connection.php">Connexion Admin</a></button>
 </p>
           <?php
 /*$restaurant = "Pastaria";

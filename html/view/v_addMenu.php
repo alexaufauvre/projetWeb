@@ -12,7 +12,7 @@
 
     </head>
     <body>
-        <h1 class="TitreAccueil">Ajouter un menu</h1>
+        <h1 class="HomeTitle">Ajouter un menu</h1>
 
         <p>
           <div class="form-group">

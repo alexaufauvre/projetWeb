@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <h1 class="TitreAccueil"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
+        <h1 class="HomeTitle"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
 
         <p>
 

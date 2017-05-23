@@ -19,7 +19,7 @@
      * Fonction pour récupérer tous les noms de restaurants
      * @return array tableau associatif
      */
-    public function getListeRestaurants() {
+    public function getListRestaurants() {
       try{
         $sql = 'SELECT ID_restaurant FROM '.$this->table;
         $req = $this->query($sql);

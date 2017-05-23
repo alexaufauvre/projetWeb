@@ -1,5 +1,5 @@
 <?php
-require_once "DatabaseConnexion.php";
+require_once "m_dbconnection.php";
 /**
  * Classe abstraite permettant de factoriser certaines fonctions
  * communes à toutes les classes de modèles
@@ -25,7 +25,7 @@ abstract class Model {
      * @return PDOStatement le résultat de la requête SQL
      */
     protected function query($sql, $params = null) {
-      $this->database = DatabaseConnection::getInstance();
+      $this->database = DBConnectionModel::getInstance();
       if ($params == null) {
         $resultat = $this->database->query($sql);    // exécution directe
       }

@@ -2,35 +2,35 @@
 
 -- Sélection du menu
 -- Menu Pastaria
-SELECT nom_plat FROM plat, composition
-WHERE plat.ID_plat = composition.ID_plat AND composition.ID_restaurant='Pastaria' AND composition.date_composition=CURRENT_DATE; -- date de la forme 2017-05-22
+SELECT dish_name FROM dish, composition
+WHERE dish.ID_dish = composition.ID_dish AND composition.ID_restaurant='Pastaria' AND composition.ID_date=CURRENT_DATE; -- date de la forme 2017-05-22
 
--- Table 'ru_user'
-INSERT INTO ru_user (ID_user, login, psswrd, role)
-VALUES (1, 'admin1', 'thepassword1', 0),
-       (2, 'admin2', 'thepassword2', 0),
-       (3, 'admin3', 'thepassword3', 0),
-       (4, 'admin4', 'thepassword4', 0);
+-- Table 'admin'
+INSERT INTO admin (ID_admin, login, psswrd)
+VALUES (1, 'admin1', 'thepassword1'),
+       (2, 'admin2', 'thepassword2'),
+       (3, 'admin3', 'thepassword3'),
+       (4, 'admin4', 'thepassword4');
 
 -- Table 'restaurant'
-INSERT INTO restaurant (ID_restaurant, lieu_restaurant)
+INSERT INTO restaurant (ID_restaurant, restaurant_place)
 VALUES ('Entrée chaude','Europe'),
        ('Pastaria', 'Europe'),
        ('Cuisine du Monde', 'Europe'),
        ('Saveurs de la Mer', 'Europe'),
        ('Rôtisserie', 'Europe'),
-       ('Plats des Régions', 'Afrique'),
+       ('dishs des Régions', 'Afrique'),
        ('Grill', 'Afrique'),
        ('L\'(x)tra', 'Amerique'),
        ('Little Italy', 'Chapiteau');
 
--- Table 'plat'
-INSERT INTO plat (nom_plat)
+-- Table 'dish'
+INSERT INTO dish (dish_name)
 VALUES ('Feuilleté de Chèvre'),
        ('Boulettes de Boeuf Sauce Napolitaine (Boeuf origine France)'),
        ('Entrecôte Grillée (Boeuf origine France)'),
        ('Gratin Dauphinois'),
-       ('Haricots Plats'),
+       ('Haricots dishs'),
        ('Omelette aux Pommes de Terre'),
        ('Frites'),
        ('Filet de Poisson Sauce Bordelaise'),
@@ -39,12 +39,9 @@ VALUES ('Feuilleté de Chèvre'),
        ('Margarita'),
        ('Orientale');
 
-       -- Table 'ru_date'
-       INSERT INTO ru_date (ID_date)
-       VALUES ('2017-05-22');
 
 -- Table 'composition'
-INSERT INTO composition (ID_date, ID_restaurant, ID_plat)
+INSERT INTO compose (ID_date, ID_restaurant, ID_dish)
 VALUES ('2017-05-22','Pastaria', 9),
        ('2017-05-22','Pastaria', 5),
        ('2017-05-22','Little Italy', 11),

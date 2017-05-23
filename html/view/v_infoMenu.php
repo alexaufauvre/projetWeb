@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <h1 class="TitreAccueil">Informations sur le menu</h1>
+        <h1 class="HomeTitle">Informations sur le menu</h1>
 
         <p>
         <h2>Little Italy</h2>

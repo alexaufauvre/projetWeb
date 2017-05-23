@@ -5,7 +5,7 @@
  * @return pdo l'instance de la connexion
  */
 
-function connexion()
+function connection()
 {
 $dsn = "pgsql:"
     . "ec2-54-228-255-234.eu-west-1.compute.amazonaws.com;"

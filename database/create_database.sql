@@ -1,72 +1,63 @@
 -- Création de la base de données PostGres
 
-/*DROP TABLE ru_user CASCADE;
+/*DROP TABLE admin CASCADE;
 DROP TABLE restaurant CASCADE;
-DROP TABLE plat CASCADE;
-DROP TABLE menu CASCADE;
+DROP TABLE dish CASCADE;
 DROP TABLE composition CASCADE;
-DROP TYPE noteavis CASCADE;
-DROP TABLE avis CASCADE;
-DROP TABLE apport CASCADE;*/
+DROP TYPE ratereview CASCADE;
+DROP TABLE review CASCADE;
+DROP TABLE nutrition CASCADE;*/
 
-CREATE TABLE IF NOT EXISTS ru_user (
-  ID_user INTEGER,
-  login varchar(50),
-  psswrd varchar(100),
-  role INTEGER,
-  PRIMARY KEY (ID_user)
+CREATE TABLE IF NOT EXISTS admin (
+  ID_admin INTEGER,
+  login varchar(64),
+  psswrd varchar(128),
+  PRIMARY KEY (ID_admin)
 );
 
 CREATE TABLE IF NOT EXISTS restaurant (
-  ID_restaurant varchar(50),
-  lieu_restaurant varchar(50),
+  ID_restaurant varchar(64),
+  restaurant_place varchar(64),
   PRIMARY KEY (ID_restaurant)
 );
 
-CREATE TABLE IF NOT EXISTS apport (
-  ID_apport INTEGER,
+CREATE TABLE IF NOT EXISTS nutrition (
+  ID_nutrition INTEGER,
   calories INTEGER,
-  lipides INTEGER,
-  glucides INTEGER,
-  sucres INTEGER,
-  proteines INTEGER,
-  fibres INTEGER,
+  lipids INTEGER,
+  carbohydrates INTEGER,
+  proteins INTEGER,
+  fibers INTEGER,
   sodium INTEGER,
-  PRIMARY KEY (ID_apport)
+  PRIMARY KEY (ID_nutrition)
 );
 
-CREATE TABLE IF NOT EXISTS plat (
-  ID_plat SERIAL,
-  nom_plat varchar(100),
-  ID_apport INTEGER,
-  PRIMARY KEY (ID_plat),
-  FOREIGN KEY (ID_apport) REFERENCES apport(ID_apport)
-);
-
-CREATE TABLE IF NOT EXISTS ru_date (
-	ID_date date,
-	PRIMARY KEY (ID_date)
+CREATE TABLE IF NOT EXISTS dish (
+  ID_dish SERIAL,
+  dish_name varchar(128),
+  ID_nutrition INTEGER,
+  PRIMARY KEY (ID_dish),
+  FOREIGN KEY (ID_nutrition) REFERENCES nutrition(ID_nutrition)
 );
 
 
-CREATE TABLE IF NOT EXISTS composition (
+CREATE TABLE IF NOT EXISTS compose (
   ID_date date,
-  ID_restaurant varchar(50),
-  ID_plat INTEGER,
-  PRIMARY KEY (ID_date, ID_restaurant, ID_plat),
-  FOREIGN KEY (ID_date) REFERENCES ru_date(ID_date),
+  ID_restaurant varchar(64),
+  ID_dish INTEGER,
+  PRIMARY KEY (ID_date, ID_restaurant, ID_dish),
   FOREIGN KEY (ID_restaurant) REFERENCES restaurant(ID_restaurant),
-  FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat)
+  FOREIGN KEY (ID_dish) REFERENCES dish(ID_dish)
 );
 
-CREATE TYPE noteavis AS ENUM('0','1','2','3','4','5');
+CREATE TYPE ratereview AS ENUM('0','1','2','3','4','5');
 
-CREATE TABLE IF NOT EXISTS avis (
-  ID_avis INTEGER,
-  ID_plat INTEGER,
-  auteur varchar(30),
-  note noteavis,
-  description char(150),
-  PRIMARY KEY (ID_avis),
-  FOREIGN KEY (ID_plat) REFERENCES plat(ID_plat)
+CREATE TABLE IF NOT EXISTS review (
+  ID_review INTEGER,
+  ID_dish INTEGER,
+  author varchar(32),
+  rate ratereview,
+  comment char(256),
+  PRIMARY KEY (ID_review),
+  FOREIGN KEY (ID_dish) REFERENCES dish(ID_dish)
 );

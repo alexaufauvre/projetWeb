@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <h1 class="TitreAccueil">Connexion admin</h1>
+        <h1 class="HomeTitle">Connexion admin</h1>
 
         <p>
 
@@ -38,7 +38,7 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <!-- <button type="submit" class="btn btn-default">Submit</button> // Vrai submit -->
-      <button type="button" class="btn btn-warning"><a href="../view/v_ajoutMenu.php">Submit</a></button>
+      <button type="button" class="btn btn-warning"><a href="../view/v_addMenu.php">Submit</a></button>
     </div>
   </div>
 </form>

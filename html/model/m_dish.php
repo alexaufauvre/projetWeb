@@ -5,25 +5,25 @@
    * Hérite de la classe Model
    * @author AlexAufauvre
    */
-  class PlatModel extends Model {
+  class DishModel extends Model {
     /**
      * @var $pk_key clé primaire de la table
      */
-    protected $pk_key = 'ID_plat';
+    protected $pk_key = 'ID_dish';
     /**
      * @var $table table de la base de données utilisée par la classe
      */
-    protected $table = 'plat';
+    protected $table = 'dish';
 
     /**
      * Sélection d'un plat par son nom
      * @param string $label nom du plat
      * @return array tableau associatif
      */
-    public function getByNomPlat($nom) {
+    public function getByDishName($name) {
       try {
-        $sql = "SELECT * FROM ".$this->table." WHERE nom_plat = :nom";
-        $req = $this->query($sql,array(":nom"=> $nom));
+        $sql = "SELECT * FROM ".$this->table." WHERE dish_name = :name";
+        $req = $this->query($sql,array(":name"=> $name));
         $res = $req->fetch(PDO::FETCH_ASSOC);
         return $res;
       }
@@ -34,12 +34,12 @@
     }
 
     /**
-     * Sélection d'un plat par son nom
+     * Sélection de la liste des noms des plats
      * @return array tableau associatif
      */
-    public function getListeNomPlats() {
+    public function getListDishName() {
       try {
-        $sql = 'SELECT nom_plat FROM '.$this->table;
+        $sql = 'SELECT dish_name FROM '.$this->table;
         $req = $this->query($sql);
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
@@ -51,12 +51,12 @@
     }
 
     /**
-     * Sélection d'un plat par son nom
+     * Sélection de la liste des id des plats
      * @return array tableau associatif
      */
-    public function getListeIdPlats() {
+    public function getListIdDish() {
       try {
-        $sql = 'SELECT ID_plat FROM '.$this->table;
+        $sql = 'SELECT ID_dish FROM '.$this->table;
         $req = $this->query($sql);
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
