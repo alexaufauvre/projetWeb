@@ -7,6 +7,7 @@ body{
 	font-family: montserrat, arial, verdana;
 	background-color: #900C3F;
 	color: #FFFFFF;
+
 }
 
 /*Nuancier Rouge
@@ -25,6 +26,7 @@ body{
 		text-align: center;
 }
 
+
 .HomeTitle{
 	display: block;
 	width: 100%;
@@ -33,10 +35,4 @@ body{
 	background-color: #581845;
 	color: #ecf0f1;
 	font-size: 4em;
-}
-
-.leftColumn{
-	display: block;
-	text-align: center;
-	/*background-color: #FF5733;*/
 }

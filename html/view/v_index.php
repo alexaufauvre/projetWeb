@@ -8,9 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="html/style.css">
-        <?php /*require_once "html/model/m_composition.php";
-        require_once "html/model/m_plat.php";*/
-        ?>
+
 
     </head>
 
@@ -18,20 +16,21 @@
     <body>
         <h1 class="HomeTitle"><?php echo 'Menu du ' .date('d/m/Y'); ?></h1>
 
-
+<!-- Little Italy -->
         <div id="container-fluid">
             <div class="row">
                 <div class="col-md-4 col-xs-12"><h2>Little Italy</h2>
                   <br>
 
                     <?php
-                    /*
-                    $platmodel = new PlatModel();
-                    $res = $platmodel->getListeIdPlats();
-                    var_dump ($res);
-                    $compositionmodel = new CompositionModel();
-                    $resto = 'Little Italy';
-                    var_dump $compositionmodel->getMenu($resto);*/ ?>
+
+                    foreach($menuLittleItaly as $element)
+                        {
+                            echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                        }
+
+                    ?>
+                    <br>
 
                     <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
                       <br/>
@@ -40,18 +39,9 @@
   </p>
     </div>
 
-  <div class="col-md-4 col-xs-12"><!-- <h2>Cuisine du Monde</h2>
-        <br>
-        <p>Entrée</p>
-        <br>
-        <p>Plat 1</p>
-        <br>
-        <p>Plat 2</p>
-        <br>
-        <p><button type="button" class="btn btn-link"><a href="view/v_infoMenu.php">>>Infos menu</a></button>
-          <br/>
-          <button type="button" class="btn btn-link">
-    <a href="view/v_infoMenu.php">>>Tarifs</a></button></p> -->
+
+<!-- Carousel -->
+  <div class="col-md-4 col-xs-12">
 
 
     <div id="myCarousel" class="column carousel slide" data-ride="carousel">
@@ -62,6 +52,8 @@
         <li data-target="#myCarousel" data-slide-to="2"></li>
         <li data-target="#myCarousel" data-slide-to="3"></li>
         <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
       </ol>
 
       <!-- Wrapper for slides -->
@@ -69,11 +61,15 @@
         <div class="item active">
           <h2>Cuisine du Monde</h2>
             <br>
-            <p>Entrée</p>
-            <br>
-            <p>Plat 1</p>
-            <br>
-            <p>Plat 2</p>
+            <?php
+
+            foreach($menuCuisineDuMonde as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+
+                }
+
+            ?>
             <br>
             <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
@@ -85,11 +81,14 @@
         <div class="item">
           <h2>Pastaria</h2>
             <br>
-            <p>Entrée</p>
-            <br>
-            <p>Plat 1</p>
-            <br>
-            <p>Plat 2</p>
+            <?php
+
+            foreach($menuPastaria as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                }
+
+            ?>
             <br>
             <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
@@ -101,11 +100,33 @@
         <div class="item">
           <h2>Saveurs de la Mer</h2>
             <br>
-            <p>Entrée</p>
+            <?php
+
+            foreach($menuSaveursDeLaMer as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                }
+
+            ?>
             <br>
-            <p>Plat 1</p>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
+              <br/>
+              <button type="button" class="btn btn-link">
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
+        </div>
+
+        <div class="item">
+          <h2>Entrées Chaudes</h2>
             <br>
-            <p>Plat 2</p>
+            <?php
+
+            foreach($menuEntreesChaudes as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                }
+
+            ?>
             <br>
             <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
@@ -117,11 +138,33 @@
         <div class="item">
           <h2>Rôtisserie</h2>
             <br>
-            <p>Entrée</p>
+            <?php
+
+            foreach($menuRotisserie as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                }
+
+            ?>
             <br>
-            <p>Plat 1</p>
+            <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
+              <br/>
+              <button type="button" class="btn btn-link">
+        <a href="html/view/v_infoMenu.php">>>Tarifs</a></button> <!-- Modal -->
+      </p>
+        </div>
+
+        <div class="item">
+          <h2>Plats des Régions</h2>
             <br>
-            <p>Plat 2</p>
+            <?php
+
+            foreach($menuPlatsDesRegions as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                }
+
+            ?>
             <br>
             <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
@@ -133,11 +176,14 @@
         <div class="item">
           <h2>Grill</h2>
             <br>
-            <p>Entrée</p>
-            <br>
-            <p>Plat 1</p>
-            <br>
-            <p>Plat 2</p>
+            <?php
+
+            foreach($menuGrill as $element)
+                {
+                    echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+                }
+
+            ?>
             <br>
             <p><button type="button" class="btn btn-link"><a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
               <br/>
@@ -164,13 +210,17 @@
   </div>
 
 
+<!-- L'(x)tra -->
       <div class="col-md-4 col-xs-12"><h2>L'(x)tra</h2>
         <br>
-        <p>Entrée</p>
-        <br>
-        <p>Plat 1</p>
-        <br>
-        <p>Plat 2</p>
+        <?php
+
+        foreach($menuLxtra as $element)
+            {
+                echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
+            }
+
+        ?>
         <br>
         <p><button type="button" class="btn btn-link">
           <a href="html/view/v_infoMenu.php">>>Infos menu</a></button>
@@ -189,10 +239,7 @@
 
     <p><button type="button" class="btn btn-warning"><a href="html/view/v_connection.php">Connexion Admin</a></button>
 </p>
-          <?php
-/*$restaurant = "Pastaria";
-echo 'Le menu de ' .$restaurant. ' est :';*/
-?>
+
     </body>
 
 
