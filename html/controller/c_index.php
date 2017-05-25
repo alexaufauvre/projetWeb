@@ -17,8 +17,6 @@ $menuPlatsDesRegions = $composemodel->getMenuRestaurant('Plats des Régions');
 
 
 
-
-
 include_once('html/view/v_index.php');
 
  ?>

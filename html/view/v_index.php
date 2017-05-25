@@ -26,8 +26,7 @@
 
                     foreach($menuLittleItaly as $element)
                         {
-                            echo $element['dish_name'] . '<br><br>'; // affichera $res[0], $res[1] etc.
-                        }
+                            echo $element['dish_name'] . '<br><br>'; } // affichera $res[0], $res[1] etc.
 
                     ?>
                     <br>

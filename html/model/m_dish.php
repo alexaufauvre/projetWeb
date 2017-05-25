@@ -68,5 +68,24 @@
     }
 
 
+    /**
+     * Sélection de l'id d'un plat
+     * @param string $label nom du plat
+     * @return array tableau associatif
+     */
+    public function getIdDish($name) {
+      try {
+        $sql = "SELECT ID_dish FROM ".$this->table." WHERE dish_name = :name";
+        $req = $this->query($sql,array(":name"=> $name));
+        $res = $req->fetch(PDO::FETCH_ASSOC);
+        return $res;
+      }
+      catch(PDOException $e){
+        exit('<p>Erreur lors de la selection de l\'objet dans la table : '.$this->table
+             .'<br/>'.$e->getMessage().'</p>');
+      }
+    }
+
+
   }
 ?>

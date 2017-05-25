@@ -51,7 +51,7 @@
     public function getMenuRestaurant($id) {
       try{
         $sql = 'SELECT dish_name FROM dish, '.$this->table.' WHERE ' .$this->table. '.ID_dish = dish.ID_dish AND '.$this->pk_key.' = \'' .date('Y-m-d'). '\' AND ' .$this->restaurant.' = :id';
-        // echo $sql;
+        //echo $sql;
         $req = $this->query($sql,array(":id"=>$id));
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
@@ -60,7 +60,28 @@
         exit('<p>Erreur lors de la selection de l\'objet dans la table : '.$this->table
              .'<br/>'.$e->getMessage().'</p>');
       }
-    }
+    }//getMenuRestaurant
+
+
+
+    /**
+     * Insertion d'un nouveau menu dans la base
+     * @param array $menu tableau contenant les valeurs à insérer dans la table
+     */
+    public function setMenu($date,$restaurant,$dish) {
+      try {
+        $sql = 'INSERT INTO '.$this->table.'(ID_date, ID_restaurant, ID_dish) VALUES (:date, :restaurant, :dish)';
+        echo $sql;
+        $req = $this->query($sql, array(':date' => $date,
+                                         ':restaurant' => $restaurant,
+                                         ':dish' => $dish));
+        return $this->database->lastInsertId();
+      }
+      catch(PDOException $e){
+        exit('<p>Erreur lors de l\'insertion des données dans la table : '.$this->table
+             .'<br/>'.$e->getMessage().'</p>');
+      }
+    }//setMenu
 
   } //composemodel
 
