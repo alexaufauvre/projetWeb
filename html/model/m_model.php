@@ -1,5 +1,5 @@
 <?php
-require_once "m_dbconnection.php"; 
+require_once "m_dbconnection.php";
 // require_once "m_mysqlconnection.php";
 /**
  * Classe abstraite permettant de factoriser certaines fonctions

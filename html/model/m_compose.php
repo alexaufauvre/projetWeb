@@ -1,7 +1,7 @@
 <?php
   require_once "m_model.php";
   /**
-   * Classe permettant l'interaction avec la table "composition"
+   * Classe permettant l'interaction avec la table "compose"
    * Hérite de la classe Model
    * @author AlexAufauvre
    */
@@ -30,8 +30,8 @@
      */
     public function getMenu($id) {
       try{
-        $sql = 'SELECT ID_dish FROM '.$this->table.' WHERE '.$this->pk_key.' = "' .date('Y-m-d'). '" AND ' .$this->restaurant.' = :id';
-        echo $sql;
+        $sql = 'SELECT ID_dish FROM '.$this->table.' WHERE '.$this->pk_key.' = \'' .date('Y-m-d'). '\' AND ' .$this->restaurant.' = :id';
+        //echo $sql;
         $req = $this->query($sql,array(":id"=>$id));
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
         return $res;
@@ -50,7 +50,7 @@
      */
     public function getMenuRestaurant($id) {
       try{
-        $sql = 'SELECT dish_name FROM dish, '.$this->table.' WHERE ' .$this->table. '.ID_dish = dish.ID_dish AND '.$this->pk_key.' = "' .date('Y-m-d'). '" AND ' .$this->restaurant.' = :id';
+        $sql = 'SELECT dish_name FROM dish, '.$this->table.' WHERE ' .$this->table. '.ID_dish = dish.ID_dish AND '.$this->pk_key.' = \'' .date('Y-m-d'). '\' AND ' .$this->restaurant.' = :id';
         // echo $sql;
         $req = $this->query($sql,array(":id"=>$id));
         $res = $req->fetchAll(PDO::FETCH_ASSOC);
