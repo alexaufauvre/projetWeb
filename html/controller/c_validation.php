@@ -8,10 +8,10 @@ $dishmodel = new DishModel();
 $composemodel = new ComposeModel();
 
 $date = $_POST['Date'];
-$date = "'".$date."'";
+// $date = "'".$date."'";
 
 $restaurant = $_POST['Restaurant'];
-$restaurant = "'".$restaurant."'";
+// $restaurant = "'".$restaurant."'";
 
 
 $dish1 = $dishmodel->getIdDish($_POST['Dish1']);
