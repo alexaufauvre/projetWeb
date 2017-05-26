@@ -16,15 +16,15 @@ $restaurant = $_POST["Restaurant"];
 
 $dish1 = $dishmodel->getIdDish($_POST["Dish1"]);
 var_dump($dish1);
-$dish1 = $dish1["ID_dish"];
+$dish1 = $dish1["id_dish"];
 
 $dish2 = $dishmodel->getIdDish($_POST["Dish2"]);
 var_dump($dish2);
-$dish2 = $dish2["ID_dish"];
+$dish2 = $dish2["id_dish"];
 
 $dish3 = $dishmodel->getIdDish($_POST["Dish3"]);
 var_dump($dish3);
-$dish3 = $dish3["ID_dish"];
+$dish3 = $dish3["id_dish"];
 
 echo $date;
 echo $restaurant;
