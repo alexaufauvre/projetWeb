@@ -101,11 +101,51 @@
 
               <select name="Dish2" class="form-control" id="selDish2">
 
-                <option value="Sélectionner le Plat" selected="selected">Sélectionner le Plat</option>
                 <option value="Kebab">Kebab</option>
                 <option value="Frites">Frites</option>
                 <option value="Haricots Plats">Haricots Plats</option>
                 <option value="Feuilleté de Chèvre">Feuilleté de Chèvre</option>
+                <option value="Boulettes de Boeuf Sauce Napolitaine (Boeuf origine France)">Boulettes de Boeuf Sauce Napolitaine (Boeuf origine France)</option>
+                <option value="Entrecôte Grillée (Boeuf origine France)">Entrecôte Grillée (Boeuf origine France)</option>
+                <option value="Gratin Dauphinois">Gratin Dauphinois</option>
+                <option value="Omelette aux Pommes de Terre">Omelette aux Pommes de Terre</option>
+                <option value="Steack Haché">Steack Haché</option>
+                <option value="Filet de Poisson Sauce Bordelaise">Filet de Poisson Sauce Bordelaise</option>
+                <option value="Tagliatelles">Tagliatelles</option>
+                <option value="Haricots Verts Persillés">Haricots Verts Persillés</option>
+                <option value="Emincé de Volaille Sauce aux Epices Douces">Emincé de Volaille Sauce aux Epices Douces</option>
+                <option value="Pommes de Terre Sautées">Pommes de Terre Sautées</option>
+                <option value="Fondue de Poireaux">Fondue de Poireaux</option>
+                <option value="Rosbeef Sauce au Poivre">Rosbeef Sauce au Poivre</option>
+                <option value="Gratin de Choux Fleur">Gratin de Choux Fleur</option>
+                <option value="Bavette Sauce Echalote">Bavette Sauce Echalote</option>
+                <option value="Potatoes">Potatoes</option>
+                <option value="Tomate Provençale">Tomate Provençale</option>
+                <option value="Cheeseburger">Cheeseburger</option>
+                <option value="Pommes de Terre Rösti">Pommes de Terre Rösti</option>
+                <option value="4 Fromages">4 Fromages</option>
+                <option value="Flamenkuche">Flamenkuche</option>
+                <option value="Margarita">Margarita</option>
+                <option value="Orientale">Orientale</option>
+                <option value="Madrilène">Madrilène</option>
+                <option value="Chèvre Miel">Chèvre Miel</option>
+                <option value="Normande">Normande</option>
+                <option value="Lasagne Bolognaise (Boeuf origine France)">Lasagne Bolognaise (Boeuf origine France)</option>
+                <option value="Filet de Saumon Sauce Echalote">Filet de Saumon Sauce Echalote</option>
+                <option value="Riz Thaï">Riz Thaï</option>
+                <option value="Ratatouille Maison">Ratatouille Maison</option>
+                <option value="Tarte Oignons Lardons (Porc)">Tarte Oignons Lardons (Porc)</option>
+                <option value="Feuilleté au Fromage">Feuilleté au Fromage</option>
+                <option value="Chipolatas">Chipolatas</option>
+                <option value="Lentilles">Lentilles</option>
+                <option value="Couscous">Couscous</option>
+                <option value="Purée">Purée</option>
+                <option value="Cuisses de Poulet Tex-Mex">Cuisses de Poulet Tex-Mex</option>
+                <option value="Quiche Lorraine">Quiche Lorraine</option>
+                <option value="Semoule">Semoule</option>
+                <option value="Quenelles de Brochet">Quenelles de Brochet</option>
+                <option value="Spaghettis Sauce Bolognaise">Spaghettis Sauce Bolognaise</option>
+
               </select>
 
               <br>
@@ -115,10 +155,53 @@
               <select name="Dish3" class="form-control" id="selDish3">
 
                 <option value="Sélectionner le Plat" selected="selected">Sélectionner le Plat</option>
+                
                 <option value="Kebab">Kebab</option>
                 <option value="Frites">Frites</option>
                 <option value="Haricots Plats">Haricots Plats</option>
-                <option value="Feuilleté de Chèvre">Feuilleté de Chèvre</option></select>
+                <option value="Feuilleté de Chèvre">Feuilleté de Chèvre</option>
+                <option value="Boulettes de Boeuf Sauce Napolitaine (Boeuf origine France)">Boulettes de Boeuf Sauce Napolitaine (Boeuf origine France)</option>
+                <option value="Entrecôte Grillée (Boeuf origine France)">Entrecôte Grillée (Boeuf origine France)</option>
+                <option value="Gratin Dauphinois">Gratin Dauphinois</option>
+                <option value="Omelette aux Pommes de Terre">Omelette aux Pommes de Terre</option>
+                <option value="Steack Haché">Steack Haché</option>
+                <option value="Filet de Poisson Sauce Bordelaise">Filet de Poisson Sauce Bordelaise</option>
+                <option value="Tagliatelles">Tagliatelles</option>
+                <option value="Haricots Verts Persillés">Haricots Verts Persillés</option>
+                <option value="Emincé de Volaille Sauce aux Epices Douces">Emincé de Volaille Sauce aux Epices Douces</option>
+                <option value="Pommes de Terre Sautées">Pommes de Terre Sautées</option>
+                <option value="Fondue de Poireaux">Fondue de Poireaux</option>
+                <option value="Rosbeef Sauce au Poivre">Rosbeef Sauce au Poivre</option>
+                <option value="Gratin de Choux Fleur">Gratin de Choux Fleur</option>
+                <option value="Bavette Sauce Echalote">Bavette Sauce Echalote</option>
+                <option value="Potatoes">Potatoes</option>
+                <option value="Tomate Provençale">Tomate Provençale</option>
+                <option value="Cheeseburger">Cheeseburger</option>
+                <option value="Pommes de Terre Rösti">Pommes de Terre Rösti</option>
+                <option value="4 Fromages">4 Fromages</option>
+                <option value="Flamenkuche">Flamenkuche</option>
+                <option value="Margarita">Margarita</option>
+                <option value="Orientale">Orientale</option>
+                <option value="Madrilène">Madrilène</option>
+                <option value="Chèvre Miel">Chèvre Miel</option>
+                <option value="Normande">Normande</option>
+                <option value="Lasagne Bolognaise (Boeuf origine France)">Lasagne Bolognaise (Boeuf origine France)</option>
+                <option value="Filet de Saumon Sauce Echalote">Filet de Saumon Sauce Echalote</option>
+                <option value="Riz Thaï">Riz Thaï</option>
+                <option value="Ratatouille Maison">Ratatouille Maison</option>
+                <option value="Tarte Oignons Lardons (Porc)">Tarte Oignons Lardons (Porc)</option>
+                <option value="Feuilleté au Fromage">Feuilleté au Fromage</option>
+                <option value="Chipolatas">Chipolatas</option>
+                <option value="Lentilles">Lentilles</option>
+                <option value="Couscous">Couscous</option>
+                <option value="Purée">Purée</option>
+                <option value="Cuisses de Poulet Tex-Mex">Cuisses de Poulet Tex-Mex</option>
+                <option value="Quiche Lorraine">Quiche Lorraine</option>
+                <option value="Semoule">Semoule</option>
+                <option value="Quenelles de Brochet">Quenelles de Brochet</option>
+                <option value="Spaghettis Sauce Bolognaise">Spaghettis Sauce Bolognaise</option>
+
+              </select>
 
                 <br>
 
