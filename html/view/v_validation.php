@@ -16,13 +16,21 @@
         <p>
           <br>
           <?php
-        echo 'Menu validé !';
+          if ($action=="Ajouter menu")
+            {
+        echo 'Menu ajouté !';
+          }
+
+          if ($action=="Supprimer menu")
+            {
+        echo 'Menu supprimé !';
+          }
         ?>
         <br>
         </p>
 
 <button type="button" class="btn btn-warning"> <a href="../../index.php">Retour accueil</a></button>
-<button type="button" class="btn btn-warning"> <a href="../controller/c_editMenu.php">Revenir à l'ajout du menu</a></button>
+<button type="button" class="btn btn-warning"> <a href="../controller/c_editMenu.php">Revenir à l'édition du menu</a></button>
 
 
 
