@@ -1,7 +1,7 @@
 <?php
   require_once "m_model.php";
   /**
-   * Classe permettant l'interaction avec la table "plat"
+   * Classe permettant l'interaction avec la table "dish"
    * Hérite de la classe Model
    * @author AlexAufauvre
    */
@@ -17,7 +17,7 @@
 
     /**
      * Sélection d'un plat par son nom
-     * @param string $label nom du plat
+     * @param string $name nom du plat
      * @return array tableau associatif
      */
     public function getByDishName($name) {
@@ -70,7 +70,7 @@
 
     /**
      * Sélection de l'id d'un plat
-     * @param string $label nom du plat
+     * @param string $name nom du plat
      * @return array tableau associatif
      */
     public function getIdDish($name) {

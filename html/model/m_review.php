@@ -1,7 +1,7 @@
 <?php
   require_once "m_model.php";
   /**
-   * Classe permettant l'interaction avec la table "nutrition"
+   * Classe permettant l'interaction avec la table "review"
    * Hérite de la classe Model
    * @author AlexAufauvre
    */

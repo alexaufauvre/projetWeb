@@ -10,22 +10,31 @@
         <link rel="stylesheet" type="text/css" href="../style.css">
 
     </head>
+
     <body>
         <h1 class="HomeTitle">Informations sur le menu</h1>
 
-        <p>
-        <h2>Little Italy</h2>
-    <br>
-      <p>Nom plats + apports + avis</p>
+          <p>
+            <h2>Informations </h2>
+
+              <br>
+
+              <p>Nom plats</p>
+
+              <br>
+
+              <p>Apports</p>
+
+              <br>
+
+              <p>Avis</p>
 
 
-<p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
-</p>
-          <?php
-/*$restaurant = "Pastaria";
-echo 'Le menu de ' .$restaurant. ' est :';*/
-?>
+              <p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
+              </p>
+
         </p>
+        
     </body>
 
 
