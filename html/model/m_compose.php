@@ -90,7 +90,7 @@
      */
     public function deleteMenu($date,$restaurant,$dish) {
       try {
-        $sql = 'DELETE FROM '.$this->table.' WHERE (ID_date=:date, ID_restaurant=:restaurant, ID_dish=:dish)';
+        $sql = 'DELETE FROM '.$this->table.' WHERE ID_date=:date AND ID_restaurant=:restaurant AND ID_dish=:dish';
         echo $sql;
         $req = $this->query($sql, array(':date' => $date,
                                          ':restaurant' => $restaurant,
