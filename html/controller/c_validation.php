@@ -2,10 +2,13 @@
 
 require_once('../model/m_compose.php');
 require_once('../model/m_dish.php');
+require_once('../model/m_datemenu.php');
 
 
 $dishmodel = new DishModel();
 $composemodel = new ComposeModel();
+$datemenumodel = new DateMenuModel();
+
 
 $date = $_POST["Date"];
 // $date = "'".$date."'";
@@ -59,6 +62,7 @@ echo $dish3;
 
 
 
+$datemenumodel->setDate($date);
 
 if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
 {
