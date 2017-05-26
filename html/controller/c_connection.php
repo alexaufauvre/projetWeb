@@ -11,6 +11,6 @@ $password = $_POST["password"];
 
 
 
-include_once('../view/c_editMenu.php');
+include_once('../controller/c_editMenu.php');
 
  ?>
