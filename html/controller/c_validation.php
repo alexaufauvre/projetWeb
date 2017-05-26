@@ -91,26 +91,22 @@ if ($actionadd=="Ajouter menu")
 
         if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
         {
-          $composemodel->delMenu($date,$restaurant,$dish1);
+          $composemodel->deleteMenu($date,$restaurant,$dish1);
 
         }
         if ($dish2 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
         {
-          $composemodel->delMenu($date,$restaurant,$dish2);
+          $composemodel->deleteMenu($date,$restaurant,$dish2);
         }
 
         if ($dish3 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
         {
-          $composemodel->delMenu($date,$restaurant,$dish3);
+          $composemodel->deleteMenu($date,$restaurant,$dish3);
         }
 
     }
 
-
-
 // var_dump($menu);
-
-
 
 include_once('../view/v_validation.php');
 
