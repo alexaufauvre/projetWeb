@@ -15,7 +15,7 @@
 
         <p>
 
-          <form class="form-horizontal" action="../controller/c_connection.php" method="post">
+          <form class="form-horizontal" action="../controller/c_editMenu.php" method="post"> <!-- Avec une vraieauthentification: action="../controller/c_connection.php" -->
   <div class="form-group">
     <label class="control-label col-sm-2" for="identifiant">Identifiant :</label>
     <div class="col-sm-5">
