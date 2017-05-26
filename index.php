@@ -16,5 +16,5 @@
 	}
 	else if($_GET['section']=='validation'){
 		include_once('html/controller/c_validation.php');
-
+	}
 ?>
