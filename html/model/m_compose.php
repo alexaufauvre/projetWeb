@@ -71,7 +71,7 @@
     public function setMenu($date,$restaurant,$dish) {
       try {
         $sql = 'INSERT INTO '.$this->table.'(ID_date, ID_restaurant, ID_dish) VALUES (:date, :restaurant, :dish)';
-        echo $sql;
+        // echo $sql;
         $req = $this->query($sql, array(':date' => $date,
                                          ':restaurant' => $restaurant,
                                          ':dish' => $dish));
@@ -91,7 +91,7 @@
     public function deleteMenu($date,$restaurant,$dish) {
       try {
         $sql = 'DELETE FROM '.$this->table.' WHERE ID_date=:date AND ID_restaurant=:restaurant AND ID_dish=:dish';
-        echo $sql;
+        // echo $sql;
         $req = $this->query($sql, array(':date' => $date,
                                          ':restaurant' => $restaurant,
                                          ':dish' => $dish));

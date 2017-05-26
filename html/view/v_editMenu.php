@@ -11,7 +11,7 @@
 
     </head>
     <body>
-        <h1 class="HomeTitle">Ajouter un menu</h1>
+        <h1 class="HomeTitle">Ajouter ou supprimer un menu</h1>
         <?php  //var_dump($listRestaurant); ?>
 
         <p>

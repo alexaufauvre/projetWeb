@@ -11,57 +11,31 @@ $datemenumodel = new DateMenuModel();
 
 $actionadd=$_POST["submitadd"];
 $actiondel=$_POST["submitdel"];
-echo $actionadd;
-echo $actiondel;
+// echo $actionadd;
+// echo $actiondel;
 $date = $_POST["Date"];
-// $date = "'".$date."'";
 
 $restaurant = $_POST["Restaurant"];
-// $restaurant = "'".$restaurant."'";
 
 
 $dish1 = $dishmodel->getIdDish($_POST["Dish1"]);
-var_dump($dish1);
+// var_dump($dish1);
 $dish1 = $dish1["id_dish"];
 
 $dish2 = $dishmodel->getIdDish($_POST["Dish2"]);
-var_dump($dish2);
+// var_dump($dish2);
 $dish2 = $dish2["id_dish"];
 
 $dish3 = $dishmodel->getIdDish($_POST["Dish3"]);
-var_dump($dish3);
+// var_dump($dish3);
 $dish3 = $dish3["id_dish"];
 
-echo $date;
-echo $restaurant;
-echo $dish1;
-echo $dish2;
-echo $dish3;
+// echo $date;
+// echo $restaurant;
+// echo $dish1;
+// echo $dish2;
+// echo $dish3;
 
-// settype($date, "date");
-// settype($dish1, "integer");
-// settype($dish2, "integer");
-// settype($dish3, "integer");
-
-
-// $menu1 = array(
-//     'ID_date' => $date,
-//     'ID_restaurant' => $restaurant,
-//     'ID_dish' => $dish1);
-//
-// $menu2 = array(
-//     'ID_date' => $date,
-//     'ID_restaurant' => $restaurant,
-//     'ID_dish' => $dish2);
-//
-// $menu3 = array(
-//     'ID_date' => $date,
-//     'ID_restaurant' => $restaurant,
-//     'ID_dish' => $dish3);
-//
-// var_dump($menu1);
-// var_dump($menu2);
-// var_dump($menu3);
 
 
 if ($actionadd=="Ajouter menu")
