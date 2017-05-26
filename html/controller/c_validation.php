@@ -7,24 +7,24 @@ require_once('../model/m_dish.php');
 $dishmodel = new DishModel();
 $composemodel = new ComposeModel();
 
-$date = $_POST['Date'];
+$date = $_POST["Date"];
 // $date = "'".$date."'";
 
-$restaurant = $_POST['Restaurant'];
+$restaurant = $_POST["Restaurant"];
 // $restaurant = "'".$restaurant."'";
 
 
-$dish1 = $dishmodel->getIdDish($_POST['Dish1']);
+$dish1 = $dishmodel->getIdDish($_POST["Dish1"]);
 var_dump($dish1);
-$dish1 = $dish1['ID_dish'];
+$dish1 = $dish1["ID_dish"];
 
-$dish2 = $dishmodel->getIdDish($_POST['Dish2']);
+$dish2 = $dishmodel->getIdDish($_POST["Dish2"]);
 var_dump($dish2);
-$dish2 = $dish2['ID_dish'];
+$dish2 = $dish2["ID_dish"];
 
-$dish3 = $dishmodel->getIdDish($_POST['Dish3']);
+$dish3 = $dishmodel->getIdDish($_POST["Dish3"]);
 var_dump($dish3);
-$dish3 = $dish3['ID_dish'];
+$dish3 = $dish3["ID_dish"];
 
 echo $date;
 echo $restaurant;
