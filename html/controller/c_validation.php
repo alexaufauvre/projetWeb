@@ -64,7 +64,7 @@ echo $dish3;
 // var_dump($menu3);
 
 
-if ($action=="Ajouter menu")
+if ($actionadd=="Ajouter menu")
   {
 
       $datemenumodel->setDate($date);
@@ -86,7 +86,7 @@ if ($action=="Ajouter menu")
 
   }
 
-  if ($action=="Supprimer menu")
+  if ($actiondel=="Supprimer menu")
     {
 
         if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))

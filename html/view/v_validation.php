@@ -16,12 +16,12 @@
         <p>
           <br>
           <?php
-          if ($action=="Ajouter menu")
+          if ($actionadd=="Ajouter menu")
             {
         echo 'Menu ajouté !';
           }
 
-          if ($action=="Supprimer menu")
+          if ($actiondel=="Supprimer menu")
             {
         echo 'Menu supprimé !';
           }
