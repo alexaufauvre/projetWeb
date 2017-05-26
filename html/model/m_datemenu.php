@@ -22,7 +22,7 @@
     public function setDate($date) {
       try {
         $sql = 'INSERT INTO '.$this->table.'(ID_date) VALUES (:date) ON CONFLICT DO NOTHING';
-        echo $sql;
+        // echo $sql;
         $req = $this->query($sql, array(':date' => $date));
         return $this->database->lastInsertId();
       }
