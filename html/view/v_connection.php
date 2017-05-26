@@ -21,7 +21,7 @@
               <div class="form-group">
                 <label class="control-label col-sm-2" for="identifiant">Identifiant :</label>
                   <div class="col-sm-5">
-                    <input type="text" name ="username" class="form-control" id="identifiant" placeholder="Entrer indentifiant">
+                    <input type="text" name ="username" class="form-control" id="identifiant" placeholder="Entrer identifiant">
                   </div>
               </div>
 
@@ -40,12 +40,17 @@
 
           </form>
 
+          <br>
+          (Cliquez directement sur SUBMIT)
+          <br>
+
+
         </p>
 
         <p>
 
           <button type="button" class="btn btn-warning"><a href="../../index.php">Retour</a></button>
-          
+
         </p>
 
     </body>
