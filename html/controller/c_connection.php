@@ -1,4 +1,6 @@
 <?php
+//Controlleur pour traiter les données de connexion
+
 
 // require_once('../model/m_admin.php');
 //

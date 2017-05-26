@@ -37,8 +37,7 @@ class DBConnectionModel {
       if (self::$pdo == null) {
          $dsn = sprintf("pgsql:host=%s;dbname=%s", self::$host, self::$database);
          try {
-            self::$pdo = new PDO($dsn, self::$user, self::$password,
-                                 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            self::$pdo = new PDO($dsn, self::$user, self::$password);
          } catch (PDOException $e) {
             exit('<p>Erreur de connexion au serveur '.self::$host.' ('.self::$user
                  .')<br/>'.$e->getMessage().'</p>');

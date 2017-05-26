@@ -1,7 +1,7 @@
 <?php
   require_once "m_model.php";
   /**
-   * Classe permettant l'interaction avec la table "plat"
+   * Classe permettant l'interaction avec la table "date_menu"
    * Hérite de la classe Model
    * @author AlexAufauvre
    */
@@ -17,12 +17,12 @@
 
     /**
      * Insertion d'une nouvelle date dans la base
-     * @param array $menu tableau contenant les valeurs à insérer dans la table
+     * @param date $date
+     * @return int l'identifiant du nouvel enregistrement
      */
     public function setDate($date) {
       try {
         $sql = 'INSERT INTO '.$this->table.'(ID_date) VALUES (:date) ON CONFLICT DO NOTHING';
-        // echo $sql;
         $req = $this->query($sql, array(':date' => $date));
         return $this->database->lastInsertId();
       }
