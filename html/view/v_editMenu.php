@@ -89,8 +89,8 @@ echo "<option value=\"owner1\">" . $row['username'] . "</option>";
 <label for="selDate">Date</label>
 <input type="date" name="Date" class="form-control" id="selDate">
 </input>
-<input type="submit" name="submit" value="Ajouter menu" id="inputAdd"/>
-<input type="submit" name="submit" value="Supprimer menu" id="inputDel"/>
+<input type="submit" name="submitadd" value="Ajouter menu" id="inputAdd"/>
+<input type="submit" name="submitdel" value="Supprimer menu" id="inputDel"/>
 </div>
 </form>
 

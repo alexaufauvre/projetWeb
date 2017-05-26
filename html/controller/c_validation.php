@@ -9,7 +9,10 @@ $dishmodel = new DishModel();
 $composemodel = new ComposeModel();
 $datemenumodel = new DateMenuModel();
 
-$action=$_POST["submit"];
+$actionadd=$_POST["submitadd"];
+$actiondel=$_POST["submitdel"];
+echo $actionadd;
+echo $actiondel;
 $date = $_POST["Date"];
 // $date = "'".$date."'";
 
@@ -85,7 +88,7 @@ if ($action=="Ajouter menu")
 
   if ($action=="Supprimer menu")
     {
-      
+
         if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
         {
           $composemodel->delMenu($date,$restaurant,$dish1);
