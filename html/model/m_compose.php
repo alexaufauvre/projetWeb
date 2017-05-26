@@ -83,6 +83,26 @@
       }
     }//setMenu
 
+
+    /**
+     * Insertion d'un nouveau menu dans la base
+     * @param array $menu tableau contenant les valeurs à insérer dans la table
+     */
+    public function deleteMenu($date,$restaurant,$dish) {
+      try {
+        $sql = 'DELETE FROM '.$this->table.' WHERE (ID_date=:date, ID_restaurant=:restaurant, ID_dish=:dish)';
+        echo $sql;
+        $req = $this->query($sql, array(':date' => $date,
+                                         ':restaurant' => $restaurant,
+                                         ':dish' => $dish));
+        return $this->database->lastInsertId();
+      }
+      catch(PDOException $e){
+        exit('<p>Erreur lors de l\'insertion des données dans la table : '.$this->table
+             .'<br/>'.$e->getMessage().'</p>');
+      }
+    }//setMenu
+
   } //composemodel
 
 ?>

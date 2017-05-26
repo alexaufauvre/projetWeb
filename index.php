@@ -11,10 +11,10 @@
   else if($_GET['section']=='connection'){
 		include_once('html/controller/c_connection.php');
 	}
-  else if($_GET['section']=='addMenu'){
-		include_once('html/controller/c_addMenu.php');
+  else if($_GET['section']=='editMenu'){
+		include_once('html/controller/c_editMenu.php');
 	}
 	else if($_GET['section']=='validation'){
 		include_once('html/controller/c_validation.php');
-	}
+
 ?>

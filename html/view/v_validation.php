@@ -14,16 +14,18 @@
         <h1 class="HomeTitle">Validation menu</h1>
 
         <p>
-
+          <br>
           <?php
         echo 'Menu validé !';
         ?>
+        <br>
+        </p>
 
 <button type="button" class="btn btn-warning"> <a href="../../index.php">Retour accueil</a></button>
-<button type="button" class="btn btn-warning"> <a href="../controller/c_addMenu.php">Revenir à l'ajout du menu</a></button>
-        <p>
+<button type="button" class="btn btn-warning"> <a href="../controller/c_editMenu.php">Revenir à l'ajout du menu</a></button>
 
-        </p>
+
+
     </body>
 
 

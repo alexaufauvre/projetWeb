@@ -2,8 +2,8 @@
 
 //Controlleur pour les données affichées dans les formulaires d'ajout de Menu
 
-require_once('../model/m_dish.php');
-require_once('../model/m_restaurant.php');
+// require_once('../model/m_dish.php');
+// require_once('../model/m_restaurant.php');
 
 // $dishmodel = new DishModel();
 // $restaurantmodel = new RestaurantModel();
@@ -19,7 +19,6 @@ require_once('../model/m_restaurant.php');
 
 
 
-
-include_once('../view/v_addMenu.php');
+include_once('../view/v_editMenu.php');
 
  ?>

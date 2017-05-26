@@ -9,7 +9,7 @@ $dishmodel = new DishModel();
 $composemodel = new ComposeModel();
 $datemenumodel = new DateMenuModel();
 
-
+$action=$_POST["submit"];
 $date = $_POST["Date"];
 // $date = "'".$date."'";
 
@@ -61,25 +61,47 @@ echo $dish3;
 // var_dump($menu3);
 
 
+if ($action=="Ajouter menu")
+  {
 
-$datemenumodel->setDate($date);
+      $datemenumodel->setDate($date);
 
-if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
-{
-  $composemodel->setMenu($date,$restaurant,$dish1);
+      if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
+      {
+        $composemodel->setMenu($date,$restaurant,$dish1);
 
-}
-if ($dish2 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
-{
-  $composemodel->setMenu($date,$restaurant,$dish2);
-}
+      }
+      if ($dish2 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
+      {
+        $composemodel->setMenu($date,$restaurant,$dish2);
+      }
 
-if ($dish3 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
-{
-  $composemodel->setMenu($date,$restaurant,$dish3);
-}
+      if ($dish3 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
+      {
+        $composemodel->setMenu($date,$restaurant,$dish3);
+      }
 
+  }
 
+  if ($action=="Supprimer menu")
+    {
+      
+        if ($dish1 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
+        {
+          $composemodel->delMenu($date,$restaurant,$dish1);
+
+        }
+        if ($dish2 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
+        {
+          $composemodel->delMenu($date,$restaurant,$dish2);
+        }
+
+        if ($dish3 != 'Sélectionner le Plat' && $restaurant != 'Sélectionner le Restaurant' && isset($date))
+        {
+          $composemodel->delMenu($date,$restaurant,$dish3);
+        }
+
+    }
 
 
 

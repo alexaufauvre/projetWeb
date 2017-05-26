@@ -89,19 +89,15 @@ echo "<option value=\"owner1\">" . $row['username'] . "</option>";
 <label for="selDate">Date</label>
 <input type="date" name="Date" class="form-control" id="selDate">
 </input>
-<input type="submit" value="Valider" />
-
+<input type="submit" name="submit" value="Ajouter menu" id="inputAdd"/>
+<input type="submit" name="submit" value="Supprimer menu" id="inputDel"/>
 </div>
 </form>
 
 
 <p><button type="button" class="btn btn-warning"> <a href="../../index.php">Retour</a></button>
 </p>
-          <?php
-/*$restaurant = "Pastaria";
-echo 'Le menu de ' .$restaurant. ' est :';*/
-?>
-        </p>
+
     </body>
 
 

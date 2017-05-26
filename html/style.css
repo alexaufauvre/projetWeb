@@ -36,3 +36,17 @@ body{
 	color: #ecf0f1;
 	font-size: 4em;
 }
+
+#inputDel {
+	background-color: #C70039 ;
+	border: 0px;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#inputAdd {
+	background-color: #d8c111 ;
+	border: 0px;
+	cursor: pointer;
+	text-decoration: underline;
+}
