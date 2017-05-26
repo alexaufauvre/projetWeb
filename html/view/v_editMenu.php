@@ -46,6 +46,7 @@
               <select name="Dish1" class="form-control" id="selDish1">
 
                <option value="Sélectionner le Plat" selected="selected">Sélectionner le Plat</option>
+               
                <option value="Kebab">Kebab</option>
                <option value="Frites">Frites</option>
                <option value="Haricots Plats">Haricots Plats</option>
@@ -101,6 +102,8 @@
 
               <select name="Dish2" class="form-control" id="selDish2">
 
+                <option value="Sélectionner le Plat" selected="selected">Sélectionner le Plat</option>
+
                 <option value="Kebab">Kebab</option>
                 <option value="Frites">Frites</option>
                 <option value="Haricots Plats">Haricots Plats</option>
@@ -155,7 +158,7 @@
               <select name="Dish3" class="form-control" id="selDish3">
 
                 <option value="Sélectionner le Plat" selected="selected">Sélectionner le Plat</option>
-                
+
                 <option value="Kebab">Kebab</option>
                 <option value="Frites">Frites</option>
                 <option value="Haricots Plats">Haricots Plats</option>
